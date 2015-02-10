@@ -29,15 +29,14 @@ loop :
 ###Representação visual
 
 ```
-		 C  ┃
-		  ╲ ┃
+		   C┃
+		   ╱┃
 		   ╲┃
 		   ╱┃
-		  ╱ ┃
-		  ╲ ┃
 		   ╲┃
 		   ╱┃
-		  ╱ ┃
+		   ╲┃
+		   ╱┃
 
 ┃ --> Linha preta
 ╱ ou ╲ --> Caminho percorrido pelo carrinho
