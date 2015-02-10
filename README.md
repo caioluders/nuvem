@@ -1,7 +1,7 @@
 # nuvem
 Exemplos de algoritmos para um carrinho seguidor de linha com Arduino , com apenas um sensor de preto/branco.
 
-* A biblioteca "Ultrasonic" é necessária para o funcionamento dos códigos*
+* A biblioteca "Ultrasonic" , que esta na pasta homônima , é necessária para o funcionamento dos códigos
 
 ## Algoritmo de Parkinson
 
