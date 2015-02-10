@@ -1,6 +1,8 @@
 # nuvem
 Exemplos de algoritmos para um carrinho seguidor de linha com Arduino , com apenas um sensor de preto/branco.
 
+* A biblioteca "Ultrasonic" é necessária para o funcionamento dos códigos*
+
 ## Algoritmo de Parkinson
 
 O carrinho começa no branco e procura a linha preta , girando para o lado , se acha-la , procura o branco , e assim por diante.
