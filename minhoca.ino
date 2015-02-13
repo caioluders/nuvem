@@ -34,7 +34,7 @@ void WALK_MORE() {
     analogWrite(MotorPin, 0);
   } else if ( (cont % 2) == 1 ) {
     analogWrite(MotorDois, 0);
-    analogWrite(MotorPin, 130);
+    analogWrite(MotorPin, 255);
   }
 }
 
@@ -53,27 +53,24 @@ void viravira ( int distancia ) {
   if ( ( distancia >= 1 ) && ( distancia <= 20 ) ){
     analogWrite(MotorDois, 0);
     analogWrite(MotorPin, 255);
-    delay(450) ;
-    analogWrite(MotorDois, 255);
-    analogWrite(MotorPin, 255);
-    delay(500) ;
-    analogWrite(MotorDois, 255);
-    analogWrite(MotorPin, 0);
-    delay(450) ;
-    analogWrite(MotorDois, 255);
-    analogWrite(MotorPin, 255);
-    delay(500) ;
-    analogWrite(MotorDois, 255);
-    analogWrite(MotorPin, 0);
-    delay(450) ;
-    analogWrite(MotorDois, 255);
-    analogWrite(MotorPin, 255);
-    delay(450) ;
+    delay(450);
     analogWrite(MotorDois, 0);
     analogWrite(MotorPin, 0);
+    delay(50);
+    analogWrite(MotorDois, 255);
+    analogWrite(MotorPin, 0);
+    delay(450);
+    analogWrite(MotorDois, 0);
+    analogWrite(MotorPin, 0);
+    delay(50);
+    analogWrite(MotorDois, 255);
+    analogWrite(MotorPin, 255);
+    delay(450);
+    analogWrite(MotorDois, 0);
+    analogWrite(MotorPin, 0);
+    cont++;
   }
 }
-
 
 void setup() {
   Serial.begin(9600);
@@ -87,7 +84,6 @@ void setup() {
 void loop() {
   valor = bw() ;
   WALK(valor) ;
-
   digitalWrite(trigPin, LOW ) ;
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH) ;
@@ -95,8 +91,6 @@ void loop() {
   digitalWrite(trigPin, LOW ) ;
   int distancia = (ultrasonic.Ranging(CM)) ;
   viravira( distancia ) ;
-
   valor = bw() ;
   WALK(valor) ;
-
 }
