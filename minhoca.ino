@@ -36,7 +36,7 @@ void WALK_MORE() {
     analogWrite(MotorPin, 0); // Desliga MotorPim
   } else if ( (cont % 2) == 1 ) {
     analogWrite(MotorDois, 0);
-    analogWrite(MotorPin, 130);
+    analogWrite(MotorPin, 255);
   }
 }
 
@@ -56,6 +56,7 @@ void WALK( boolean respect ) {
 void viravira ( int distancia ) {
   if ( ( distancia >= 5 ) && ( distancia <= 20 ) ){ //Valores menores que 5 são bugs do leitor
     analogWrite(MotorDois, 0);
+<<<<<<< HEAD
     analogWrite(MotorPin, 255); // Vira para a direita
     delay(450) ;
     analogWrite(MotorDois, 255); // Em frente
@@ -77,6 +78,28 @@ void viravira ( int distancia ) {
 }
 
 // Inicilizando a "nuvem"
+=======
+    analogWrite(MotorPin, 255);
+    delay(450);
+    analogWrite(MotorDois, 0);
+    analogWrite(MotorPin, 0);
+    delay(50);
+    analogWrite(MotorDois, 255);
+    analogWrite(MotorPin, 0);
+    delay(450);
+    analogWrite(MotorDois, 0);
+    analogWrite(MotorPin, 0);
+    delay(50);
+    analogWrite(MotorDois, 255);
+    analogWrite(MotorPin, 255);
+    delay(450);
+    analogWrite(MotorDois, 0);
+    analogWrite(MotorPin, 0);
+    cont++;
+  }
+}
+
+>>>>>>> FETCH_HEAD
 void setup() {
   Serial.begin(9600); // Liga o serial
   // Setando os modos dos pinos
@@ -88,13 +111,20 @@ void setup() {
 }
 
 void loop() {
+<<<<<<< HEAD
   valor = bw() ; // Lê o valor atual do sensor ótico
   WALK(valor) ; // Envia para função "WALK"
 
   digitalWrite(trigPin, LOW ) ; // Desliga o pino "trigPin" do sensor ultrassônico
+=======
+  valor = bw() ;
+  WALK(valor) ;
+  digitalWrite(trigPin, LOW ) ;
+>>>>>>> FETCH_HEAD
   delayMicroseconds(2);
   digitalWrite(trigPin, HIGH) ; // Liga o pino "trigPin" do sensor ultrassônico
   delayMicroseconds(10);
+<<<<<<< HEAD
   digitalWrite(trigPin, LOW ) ; // Desliga o pino "trigPin" do sensor ultrassônico
   int distancia = (ultrasonic.Ranging(CM)) ; // Lê a distância atual do sensor ultrassônico
   viravira( distancia ) ; // Envia para a função "viravira"
@@ -102,4 +132,11 @@ void loop() {
   valor = bw() ; // Lê o valor atual do sensor ótico , denovo para aumentar a precisão
   WALK(valor) ; // Envia para função "WALK"
 
+=======
+  digitalWrite(trigPin, LOW ) ;
+  int distancia = (ultrasonic.Ranging(CM)) ;
+  viravira( distancia ) ;
+  valor = bw() ;
+  WALK(valor) ;
+>>>>>>> FETCH_HEAD
 }

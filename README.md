@@ -1,7 +1,7 @@
 # nuvem
 Exemplos de algoritmos para um carrinho seguidor de linha com Arduino , com apenas um sensor de preto/branco.
 
-* A biblioteca "Ultrasonic" é necessária para o funcionamento dos códigos*
+* A biblioteca "Ultrasonic" , que esta na pasta homônima , é necessária para o funcionamento dos códigos
 
 ##Sketch
 
@@ -33,15 +33,14 @@ loop :
 ###Representação visual
 
 ```
-		 C  ┃
-		  ╲ ┃
+		   C┃
+		   ╱┃
 		   ╲┃
 		   ╱┃
-		  ╱ ┃
-		  ╲ ┃
 		   ╲┃
 		   ╱┃
-		  ╱ ┃
+		   ╲┃
+		   ╱┃
 
 ┃ --> Linha preta
 ╱ ou ╲ --> Caminho percorrido pelo carrinho
@@ -84,12 +83,12 @@ loop :
 ###Representação visual
 
 ```
-		  C ┃
-		   ╲┃
+		 C  ┃
+		  ╲┃
 		    ┃╲
 		    ┃╱
-		   ╱┃
-		   ╲┃
+		  ╱┃
+		  ╲┃
 		    ┃╲	
 		    ┃╱
 		    ┃
