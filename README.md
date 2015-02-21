@@ -3,6 +3,10 @@ Exemplos de algoritmos para um carrinho seguidor de linha com Arduino , com apen
 
 * A biblioteca "Ultrasonic" é necessária para o funcionamento dos códigos*
 
+##Sketch
+
+![alt text](nuvem.bb)
+
 ## Algoritmo de Parkinson
 
 O carrinho começa no branco e procura a linha preta , girando para o lado , se acha-la , procura o branco , e assim por diante.
