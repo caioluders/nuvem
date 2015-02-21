@@ -5,7 +5,7 @@ Exemplos de algoritmos para um carrinho seguidor de linha com Arduino , com apen
 
 ##Sketch
 
-![alt text](nuvem.bb)
+![alt text](https://raw.githubusercontent.com/geolado/nuvem/master/nuvem_bb.png)
 
 ## Algoritmo de Parkinson
 
